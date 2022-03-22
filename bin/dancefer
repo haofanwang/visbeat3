@@ -3,7 +3,7 @@
 import sys
 import matplotlib
 matplotlib.use('PS')
-import visbeat
+import visbeat3
 
 source_url = 'https://www.youtube.com/watch?v={}'.format(sys.argv[0]);
 target_url = 'https://www.youtube.com/watch?v={}'.format(sys.argv[1]);
