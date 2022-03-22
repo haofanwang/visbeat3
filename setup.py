@@ -26,6 +26,7 @@ setuptools.setup(
         'matplotlib',
     ],
   scripts=['bin/dancefer'],
+  package_data={'data': ['visbeat3/_assets/*']},
   classifiers=[
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: Apache Software License",
