@@ -9,7 +9,7 @@ This is a migration of [visbeat](http://abedavis.com/visualbeat/) from Python2 t
 ## Usage
 
 ```
-import visbeat as vb
+import visbeat3 as vb
 ```
 
 ## Reference
