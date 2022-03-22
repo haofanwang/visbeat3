@@ -7,3 +7,4 @@ include LICENSE.pdf
 
 # Include the data files
 recursive-include visbeat3/assets *
+graft visbeat3/assets
