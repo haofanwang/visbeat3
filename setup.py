@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="visbeat3",
-  version="0.0.5",
+  version="0.0.6",
   author="Haofan Wang",
   author_email="haofanwang.ai@gmail.com",
   description="Python3 Implementation for 'Visual Rhythm and Beat' SIGGRAPH 2018",
@@ -26,7 +26,7 @@ setuptools.setup(
         'matplotlib',
     ],
   scripts=['bin/dancefer'],
-  package_data={'data': ['visbeat3/_assets/*']},
+  package_data={'data': ['visbeat3/assets/*']},
   classifiers=[
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: Apache Software License",
