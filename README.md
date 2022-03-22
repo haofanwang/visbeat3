@@ -1,14 +1,24 @@
 # visbeat3
-visbeat for Python3.
 
-Code for making anything dance to anything.
-Based on "Visual Rhythm and Beat" SIGGRAPH 2018, Abe Davis and Maneesh Agrawala
+This is a migration of [visbeat](http://abedavis.com/visualbeat/) from Python2 to Python3. All credits belong to the original author.
 
-Original Project Website: http://abedavis.com/visualbeat/
+## Install
 
-
-You can install using 
 `pip install visbeat3`
 
-The easiest way to get started is probably to use the docker file. It will install everything and run a jupyter notebook for you in the examples folder. If you have trouble getting things to run on your own machine, the docker file may also provide guidance.
- 
+## Usage
+
+```
+import visbeat as vb
+```
+
+## Reference
+```
+@inproceedings{davis2018visual,
+  title={Visual rhythm and beat},
+  author={Davis, Abe and Agrawala, Maneesh},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},
+  pages={2532--2535},
+  year={2018}
+}
+```
