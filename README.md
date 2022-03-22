@@ -4,7 +4,7 @@ This is a migration of [visbeat](http://abedavis.com/visualbeat/) from Python2 t
 
 ## Install
 
-`pip install visbeat3`
+`pip3 install -e git+https://github.com/haofanwang/visbeat3.git#egg=visbeat3`
 
 ## Usage
 
