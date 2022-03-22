@@ -1,4 +1,4 @@
-from visbeat.AImports import *
+from visbeat3.AImports import *
 
 VIEWER_INSTALLED = 1;
 try:
