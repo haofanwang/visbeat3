@@ -1,5 +1,5 @@
 import os
-from visbeat.SourceLocationParser import ParseSourseLocation
+from visbeat3.SourceLocationParser import ParseSourseLocation
 
 class VisBeatExampleVideo(object):
     def __init__(self, name, url, start_beat=None, end_beat = None, display_name = None, code=None, leadin=None, **kwargs):
