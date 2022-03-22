@@ -6,4 +6,4 @@ include LICENSE
 include LICENSE.pdf
 
 # Include the data files
-# recursive-include visbeat/_assets *
+recursive-include visbeat3/_assets *
