@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="visbeat3",
-  version="0.0.7",
+  version="0.0.8",
   author="Haofan Wang",
   author_email="haofanwang.ai@gmail.com",
   description="Python3 Implementation for 'Visual Rhythm and Beat' SIGGRAPH 2018",
