@@ -2,6 +2,8 @@
 
 This is a migration of [visbeat](http://abedavis.com/visualbeat/) from Python2 to Python3. All credits belong to the original author.
 
+Note: This repo is under development, for any issue, please PR directly!
+
 ## Install
 
 ```
