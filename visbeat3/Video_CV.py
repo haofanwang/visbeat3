@@ -157,7 +157,7 @@ if(USING_OPENCV):
         flow_averages = np.zeros([self.n_frames(), 1]);
         sampling_rate=self.sampling_rate;
         duration = self.getDuration();
-        nsamples = sampling_rate*duration;
+        nsamples = int(sampling_rate*duration);
 
         frame_start_times = np.linspace(0,duration,num=nsamples,endpoint=False);
         frame_index_floats = frame_start_times*self.sampling_rate;
@@ -241,7 +241,7 @@ if(USING_OPENCV):
         feature_name = 'visual_tempo';
         if ((not self.hasFeature(feature_name)) or force_recompute):
             vbe = self.getFeature('local_rhythmic_saliency');
-            result = librosa.beat.estimate_tempo(onset_envelope=vbe, sr=self.sampling_rate, hop_length=1, **kwargs);
+            result = librosa.beat.tempo(onset_envelope=vbe, sr=self.sampling_rate, hop_length=1, **kwargs);
             self.setFeature(name=feature_name, value=result, params=kwargs);
         return self.getFeature(feature_name);
 
@@ -415,7 +415,7 @@ if(USING_OPENCV):
             ei = int(round(b.start*self.sampling_rate*VB_UPSAMPLE_FACTOR));
             b.weight = svbe[ei];
 
-            histsize = 128/int(np.power(2,HISTOGRAM_DOWNSAMPLE_LEVELS))
+            histsize = int(128/int(np.power(2,HISTOGRAM_DOWNSAMPLE_LEVELS)))
             histslice = np.zeros([histsize, HISTOGRAM_FRAMES_PER_BEAT]);
             histslice = np.squeeze(np.mean(histslice, 1));
             b.flow_histogram = downsample_hist(sig=histslice, levels=HISTOGRAM_DOWNSAMPLE_LEVELS);
