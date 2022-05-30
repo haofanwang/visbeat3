@@ -26,6 +26,9 @@ import numpy as np
 import visbeat3 as vb
 
 source_video = vb.PullVideo(name='video', source_location='./data/01.mp4')
+
+# You can also directly specify an audio
+# source_audio = vb.Audio('./data/all star.mp3')
 source_audio = vb.PullVideo(name='audio', source_location='./data/02.mp4')
 
 synch_video_beat = 0
@@ -34,6 +37,7 @@ nbeats = 32
 
 output_path = './result.mp4'
 
+# If source_audio is from an audio file, use target=source_audio 
 warped = vb.Dancify(source_video=source_video, 
                     target=source_audio.getAudio(), 
                     synch_video_beat=synch_video_beat,
