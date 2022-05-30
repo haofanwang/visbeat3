@@ -2,6 +2,8 @@
 
 This is a migration of [visbeat](http://abedavis.com/visualbeat/) from Python2 to Python3. Head over to an example notebook on [Colab](https://colab.research.google.com/drive/1rYyhNtIsICk1osGrHMPr2zISwSIysCpT?usp=sharing)!
 
+VisualBeat presents a visual analogue for musical rhythm derived from an analysis of motion in video, and show that alignment of visual rhythm with its musical counterpart results in the appearance of dance. Visit [project page](http://abedavis.com/visualbeat/) and [demos](http://abedavis.com/visualbeat/demo/) for more infos.
+
 
 ## Install
 
