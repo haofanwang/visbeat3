@@ -393,7 +393,7 @@ class Video(TimeSignal):
         print((
             "target start: {}\ntarget end: {}\ntarget duration: {}".format(target_start, target_end, target_duration)));
 
-        new_n_samples = target_duration * sampling_rate;
+        new_n_samples = int(target_duration * sampling_rate);
         target_start_times = np.linspace(target_start, target_end, num=new_n_samples, endpoint=False);
         unwarped_target_times = [];
         for st in target_start_times:
@@ -437,7 +437,7 @@ class Video(TimeSignal):
             print(('Using bitrate of {}'.format(use_bitrate)));
             rvid = Video.CreateFromVideoAndAudioObjects(video=silent_warped_vid, audio=cropped_output_audio,
                                                         output_path=output_path, bitrate=use_bitrate);
-        elif (bitrate is 'regular'):
+        elif (bitrate == 'regular'):
             rvid = Video.CreateFromVideoAndAudioObjects(video=silent_warped_vid, audio=cropped_output_audio,
                                                         output_path=output_path);
         else:
@@ -601,7 +601,8 @@ class Video(TimeSignal):
         if (audio_path):
             audio_object = Audio(path=audio_path);
 
-        output_path = output_path.encode(sys.getfilesystemencoding()).strip();
+        output_path = output_path.encode(sys.getfilesystemencoding()).strip().decode("utf-8");
+        
         make_sure_dir_exists(output_path);
 
         # audio_sig = audio_object.getSignal();

@@ -1,6 +1,8 @@
 #Image_Base
 #import numpy as np
 #import scipy as sp
+
+import numpy as np
 from PIL import Image as PIM
 from PIL import ImageDraw, ImageFont
 
@@ -237,7 +239,8 @@ class Image(AObject):
             sz=[shape[0], shape[1], self.data.shape[2]];
         else:
             sz=[shape_xy[1],shape_xy[0],self.data.shape[2]];
-        imK = sp.misc.imresize(self.data, size=sz);
+        #imK = sp.misc.imresize(self.data, size=sz);
+        imK = np.array(PIM.fromarray(self.data).resize(size=sz[:2]))
         return Image(data=imK);
 
     def getRotated(self, theta):

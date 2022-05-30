@@ -337,8 +337,9 @@ class Audio(TimeSignal1D):
         return beat_eventlist.events;
 
     def AudioClip(self, start, end):
-        from . import AudioClip
-        clip = AudioClip.AudioClip(path=self.getPath(), start=start, end=end);
+        from . import AudioClip as AC
+        #clip = AudioClip.AudioClip(path=self.getPath(), start=start, end=end);
+        clip = AC(path=self.getPath(), start=start, end=end);
         return clip;
 
 

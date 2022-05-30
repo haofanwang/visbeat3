@@ -3,6 +3,7 @@ from .VisBeatImports import *
 from .Video import *
 from .VideoClip import *
 from .VideoSource import *
+from .AudioClip import *
 from .VisBeatExampleVideo import VisBeatExampleVideo
 import re
 import os;
