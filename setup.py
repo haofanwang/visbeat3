@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="visbeat3",
-  version="0.0.8",
+  version="1.0.0",
   author="Haofan Wang",
   author_email="haofanwang.ai@gmail.com",
   description="Python3 Implementation for 'Visual Rhythm and Beat' SIGGRAPH 2018",
@@ -17,10 +17,10 @@ setuptools.setup(
         'numpy',
         'scipy',
         'bs4',
-        'librosa',
-        'imageio',
+        'librosa==0.9.1',
+        'imageio==2.9.0',
         'requests',
-        'moviepy',
+        'moviepy==1.0.3',
         'termcolor',
         'youtube-dl',
         'matplotlib',

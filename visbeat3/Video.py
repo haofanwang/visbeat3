@@ -175,14 +175,27 @@ class Video(TimeSignal):
         self.setInfo(label='frame_shape',value=example_frame.shape);
         
         # https://stackoverflow.com/questions/54778001/how-to-to-tackle-overflowerror-cannot-convert-float-infinity-to-integer
-        #for i in range(1, self.reader.get_length()):
-        for i in range(1, self.reader.count_frames()):
-            try:
-                self.reader.get_data(i);
-            except imageio.core.format.CannotReadFrameError as e:
-                break
-            valid_frames += 1
-        print("Done.")
+
+        try:
+            # latest imageio, 2.9.0
+            for i in range(1, self.reader.count_frames()):
+                try:
+                    self.reader.get_data(i);
+                except imageio.core.format.CannotReadFrameError as e:
+                    break
+                valid_frames += 1
+            print("Done.")
+        
+        except:
+            # oold imageio, 2.4.1
+            for i in range(1, self.reader.get_length()):
+                try:
+                    self.reader.get_data(i);
+                except imageio.core.format.CannotReadFrameError as e:
+                    break
+                valid_frames += 1
+            print("Done.")
+        
         return valid_frames
 
     def readFrameBasic(self, i):
