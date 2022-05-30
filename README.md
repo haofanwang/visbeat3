@@ -4,7 +4,7 @@ This is a migration of [visbeat](http://abedavis.com/visualbeat/) from Python2 t
 
 <img src="https://github.com/haofanwang/visbeat3/blob/main/data/image.png" width="100%" height="100%">
 
-VisualBeat presents a visual analogue for musical rhythm derived from an analysis of motion in video, and show that alignment of visual rhythm with its musical counterpart results in the appearance of dance. Visit [project page](http://abedavis.com/visualbeat/) and [demos](http://abedavis.com/visualbeat/demo/) for more infos.
+This work presents a visual analogue for musical rhythm derived from an analysis of motion in video, and shows that alignment of visual rhythm with its musical counterpart results in the appearance of dance. You can visit the official [project page](http://abedavis.com/visualbeat/) and [demos](http://abedavis.com/visualbeat/demo/) for more infos.
 
 
 ## Install
