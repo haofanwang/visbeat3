@@ -19,6 +19,7 @@ setuptools.setup(
         'bs4',
         'librosa==0.9.1',
         'imageio==2.9.0',
+        'imageio-ffmpeg==0.4.5',
         'requests',
         'moviepy==1.0.3',
         'termcolor',
